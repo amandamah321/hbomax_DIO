@@ -227,6 +227,23 @@ body {
     gap: 5rem;
     height: 600px;
     transition: transform 1s ease-in-out;
+    perspective: 80rem;
+}
+
+.card {
+    transition: 1s ease;
+}
+
+.card--transition1:hover {
+    animation-duration: 1s;
+    transform: rotateY(30deg);
+    transition: 1s ease;
+}
+
+.card--transition2:hover {
+    animation-duration: 1s;
+    transform: rotateY(-30deg);
+    transition: 1s ease;
 }
 
 .payment__cards__content {
