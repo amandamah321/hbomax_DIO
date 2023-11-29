@@ -189,6 +189,7 @@ body {
     left: 0;
     bottom: -130px;
     position: absolute;
+    
 }
 
 /********BUTTON HOVER**********/
@@ -208,7 +209,8 @@ body {
     font-family: 'Raleway', sans-serif;
     background-image: url(./assets/images/background-movies-series.png);
     background-repeat: no-repeat;
-    background-position: cover;
+    background-size: 150%;
+    background-position: top;
     margin: 0 auto;
 }
 
@@ -228,6 +230,7 @@ body {
     height: 600px;
     transition: transform 1s ease-in-out;
     perspective: 80rem;
+    position: relative;
 }
 
 .card {
