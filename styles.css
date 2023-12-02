@@ -55,6 +55,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 .menu__logo img {
@@ -206,32 +207,32 @@ body {
 
 /**********MAIN************/
 
+.payment__cards__content {
+    max-width: 1200px;
+}
+
 .cards__container {
     width: 100vw;
     text-align: center;
     color: var(--text-color);
     font-family: 'Raleway', sans-serif;
-    background-image: url(./assets/images/background-movies-series.png);
-    background-repeat: no-repeat;
     background-size: 150%;
-    background-position: top;
-    margin: 0 auto;
+    background: url(./assets/images/background-movies-series.png) no-repeat top;
 }
 
 .cards__container h2 {
     font-size: 2rem;
     font-weight: bolder;
-    padding: 0 165px;
-    margin-top: 60px;
+    padding: 0 10%;
+    margin-top: 80px;
 }
 
 .payment__cards {
     display: flex;
-    justify-content: space-between;
-    padding: 24px;
-    margin: 20px 165px 20px 165px;
+    justify-content: center;
+    margin-top: 3rem;
     gap: 5rem;
-    height: 600px;
+    min-height: 600px;
     transition: transform 1s ease-in-out;
     perspective: 80rem;
     position: relative;
@@ -239,6 +240,7 @@ body {
 
 .card {
     transition: 1s ease;
+    width: 34rem;
 }
 
 .card--transition1:hover {
@@ -291,7 +293,7 @@ body {
     margin-bottom: 16px;
     text-align: left;
     font-size: 1.25rem;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 }
 
 .button.button--gradient:hover {
@@ -316,19 +318,29 @@ body {
 /****GALLERY*****/
 
 .contents {
-    margin: 13rem 12rem 9rem 12rem;
+    margin: 6rem auto;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 24px;
+    text-align: center;
 }
 
 .contents__container {
     display: grid;
+    align-content: center;
     grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    margin-top: 40px;
-    gap: 3rem;
+    margin-top: 3rem;
+    gap: 1.5rem;
 }
 
 .contents__card {
-    height: 33rem;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    height: 35rem;
+    gap: 1rem;
 }
 
 .contents__card:nth-child(1) {
@@ -343,7 +355,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/hbo-hover_0.webp);
     transform: scale(1.1);
-    border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 
 }
@@ -360,7 +371,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/MAX-Hover.webp);
     transform: scale(1.1);
-    border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 
 }
@@ -377,7 +387,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/DC-Hover.webp);
     transform: scale(1.1);
-    border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 }
 
@@ -393,7 +402,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/WB-Hover.webp);
     transform: scale(1.1);
-    border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 }
 
@@ -409,7 +417,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/CN-Hover.png);
     transform: scale(1.1);
-    border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 }
 
@@ -425,7 +432,6 @@ body {
     border-radius: 15px;
     background-image: url(./assets/images/UCL-Hover.webp);
     transform: scale(1.1);
-    border: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
 }
 
@@ -523,4 +529,145 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+/***RESPONSIVE**/
+
+@media screen and (max-width: 1230px) {
+
+    .payment__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 40rem;
+    }
+
+    .contents__card {
+        height: 33rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .contents__card {
+        height: 30rem;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .contents__card {
+        height: 25rem;
+    }
+
+    .contents__container {
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .contents__card {
+        height: 35rem;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 3rem;
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+    .contents__card {
+        height: 28rem;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 3rem;
+        gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 665px) {    
+   
+    .card {
+        width: 30rem;
+    }
+
+    .contents__card {
+        height: 25rem;
+    }
+
+    .header::after {
+        height: 200px;    
+    }
+
+    .cards__container h2 {
+        font-size: 1.5rem;
+
+    }
+
+    .payment__cards__content {
+        margin-top: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+    
+    .card {
+        width: 26rem;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .header__channels {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    
+    .menu {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 7rem;
+        width: 100vw;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .header {
+        margin-top: 100px;
+        height: 130vh;
+    
+    }
+
+    .header::after {
+        bottom: -310px;
+        height: 100px;
+    
+    }
+
+
+}
+
+@media screen and (max-width: 425px) {
+    
+    .card {
+        width: 23rem;
+    }
 }
