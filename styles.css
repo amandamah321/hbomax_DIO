@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -51,6 +54,7 @@ body {
     justify-content: space-between;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 .menu__logo img {
@@ -151,7 +155,7 @@ body {
 .offer__price p {
     font-size: 2.5rem;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     letter-spacing: -2px;
 }
 
@@ -183,13 +187,13 @@ body {
 
 .header::after {
     content: '';
-    height: 220px;
+    height: 250px;
     background: linear-gradient(0deg, var(--primary-color), transparent);
     width: 100%;
     left: 0;
-    bottom: -130px;
+    bottom: -130;
     position: absolute;
-    
+
 }
 
 /********BUTTON HOVER**********/
@@ -305,7 +309,7 @@ body {
     cursor: pointer;
 }
 
-.button.button--gradient.button--align{
+.button.button--gradient.button--align {
     margin-top: 5rem;
 }
 
@@ -332,7 +336,7 @@ body {
     background-image: url(./assets/images/hbo-default_0.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;   
+    transition: 1s;
 }
 
 .contents__card:nth-child(1):hover {
@@ -341,7 +345,7 @@ body {
     transform: scale(1.1);
     border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
-    
+
 }
 
 .contents__card:nth-child(2) {
@@ -349,7 +353,7 @@ body {
     background-image: url(./assets/images/MAX-Default.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;    
+    transition: 1s;
 }
 
 .contents__card:nth-child(2):hover {
@@ -358,7 +362,7 @@ body {
     transform: scale(1.1);
     border-right: 2px solid var(--tertiary-color);
     transition: background-image 1s, transform 1s, border-right 0s;
-    
+
 }
 
 .contents__card:nth-child(3) {
@@ -366,7 +370,7 @@ body {
     background-image: url(./assets/images/DC_Default.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;    
+    transition: 1s;
 }
 
 .contents__card:nth-child(3):hover {
@@ -382,7 +386,7 @@ body {
     background-image: url(./assets/images/WB-Default.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;    
+    transition: 1s;
 }
 
 .contents__card:nth-child(4):hover {
@@ -398,7 +402,7 @@ body {
     background-image: url(./assets/images/CN-Default.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;    
+    transition: 1s;
 }
 
 .contents__card:nth-child(5):hover {
@@ -414,7 +418,7 @@ body {
     background-image: url(./assets/images/UCL-Default.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 1s;    
+    transition: 1s;
 }
 
 .contents__card:nth-child(6):hover {
@@ -428,7 +432,8 @@ body {
 /***************FOOTER*************/
 
 .footer__link {
-    color: var(--link-color);color: var(--link-color);
+    color: var(--link-color);
+    color: var(--link-color);
     text-decoration: none;
     font-family: "Raleway", sans-serif;
     margin: 0px 14px;
@@ -503,4 +508,19 @@ body {
         transform: rotate(0);
     }
 
+}
+
+/*****SCROOL****/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }

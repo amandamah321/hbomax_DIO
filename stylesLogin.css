@@ -220,3 +220,18 @@ body {
     gap: 40px;
     margin: 60px 0px 25px;
 }
+
+/*****SCROOL****/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
