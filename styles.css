@@ -662,6 +662,18 @@ body {
     
     }
 
+    .galerry--flex {
+        display: inline-block;
+        width: 80vw;
+        height: 35rem;
+        overflow: scroll;   
+        padding-bottom: 0;   
+
+    }
+
+    .contents__card {
+        height: inherit;
+    }
 
 }
 
